@@ -559,16 +559,24 @@ export default function Home() {
           <h2 id="people-title">People</h2>
           <article className="people-card" aria-labelledby="students-title">
             <h3 id="students-title">Ph.D. Students</h3>
-            <div className="people-copy">
-              <p>
-                Haoxiang Li, graduated in 2024, supervised jointly with Galin L.
-                Jones.
-              </p>
-              <p>
-                Dissertation: Uncertainty Assessment and Convergence Analysis
-                for Markov Chain Monte Carlo Algorithms.
-              </p>
-            </div>
+            <ul className="people-list">
+              <li>
+                <p>
+                  Youngwoo Kwon, current student, supervised jointly with Galin
+                  L. Jones.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Haoxiang Li, graduated in 2024, supervised jointly with Galin
+                  L. Jones.
+                </p>
+                <p>
+                  Dissertation: Uncertainty Assessment and Convergence Analysis
+                  for Markov Chain Monte Carlo Algorithms.
+                </p>
+              </li>
+            </ul>
           </article>
         </section>
 
