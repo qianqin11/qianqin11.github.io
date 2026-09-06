@@ -173,6 +173,7 @@
 .articles a,
 .links-copy a {
   color: inherit;
+  text-decoration-line: underline;
   text-decoration-color: color-mix(in srgb, currentColor, transparent 45%);
   text-underline-offset: 0.2em;
 }
@@ -265,6 +266,15 @@
   color: #eadde0;
 }
 
+.student-card .background-copy p:first-child {
+  padding-bottom: 0.35rem;
+  border-bottom: 0;
+}
+
+.student-card .background-copy p + p {
+  padding-top: 0.35rem;
+}
+
 .research-section {
   padding: clamp(6rem, 10vw, 10rem) 6vw;
   background: #faf8f3;
@@ -343,7 +353,7 @@
 }
 
 .articles article em {
-  color: var(--muted-foreground);
+  color: inherit;
 }
 
 .links-section {
