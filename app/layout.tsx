@@ -7,31 +7,31 @@ const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin']
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://qian-qin.qianqin11.chatgpt.site'),
-  title: 'Qian Qin | Statistics & Markov Chain Monte Carlo',
+  title: 'Qian Qin | 秦芊',
   description:
-    'Qian Qin is an Associate Professor in the School of Statistics at the University of Minnesota, researching Markov chains and MCMC.',
+    'I work on convergence analysis of Markov chains and the theory of Markov chain Monte Carlo (MCMC).',
   icons: { icon: '/favicon.svg' },
   openGraph: {
-    title: 'Qian Qin | Statistics & Markov Chain Monte Carlo',
+    title: 'Qian Qin | 秦芊',
     description:
-      'Associate Professor of Statistics at the University of Minnesota. Research in Markov chains and MCMC.',
+      'I work on convergence analysis of Markov chains and the theory of Markov chain Monte Carlo (MCMC).',
     url: 'https://qian-qin.qianqin11.chatgpt.site',
-    siteName: 'Qian Qin',
+    siteName: 'Qian Qin | 秦芊',
     type: 'website',
     images: [
       {
         url: 'https://qian-qin.qianqin11.chatgpt.site/og.png',
         width: 1680,
         height: 945,
-        alt: 'Qian Qin — Statistics, Markov Chains, and MCMC',
+        alt: 'Qian Qin | 秦芊',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Qian Qin | Statistics & Markov Chain Monte Carlo',
+    title: 'Qian Qin | 秦芊',
     description:
-      'Associate Professor of Statistics at the University of Minnesota. Research in Markov chains and MCMC.',
+      'I work on convergence analysis of Markov chains and the theory of Markov chain Monte Carlo (MCMC).',
     images: ['https://qian-qin.qianqin11.chatgpt.site/og.png'],
   },
 };
