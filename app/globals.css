@@ -106,6 +106,7 @@
   font-weight: 700;
   letter-spacing: -0.02em;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .site-header nav {
@@ -121,6 +122,7 @@
   font-weight: 650;
   text-decoration: none;
   transition: color 180ms ease;
+  white-space: nowrap;
 }
 
 .site-header nav a::after {
@@ -155,13 +157,14 @@
   transform: scaleX(1);
 }
 
-#basic-info,
+#bio,
 #research,
+#people,
 #links {
   scroll-margin-top: 76px;
 }
 
-.basic-info {
+.bio-section {
   display: grid;
   grid-template-columns: minmax(0, 1.28fr) minmax(280px, 0.72fr);
   min-height: calc(100vh - 76px);
@@ -260,7 +263,7 @@
 
 .background-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.35fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1px;
   padding: clamp(5rem, 8vw, 8rem) 6vw;
   background: var(--border);
@@ -297,15 +300,6 @@
   line-height: 1.65;
 }
 
-.student-card .background-copy p:first-child {
-  padding-bottom: 0.35rem;
-  border-bottom: 0;
-}
-
-.student-card .background-copy p + p {
-  padding-top: 0.35rem;
-}
-
 .research-section {
   padding: clamp(6rem, 10vw, 10rem) 6vw;
   background: var(--card);
@@ -321,6 +315,7 @@
 
 .research-intro h2,
 .articles > h2,
+.people-section > h2,
 .links-section > h2 {
   margin: 0;
   font-family: Georgia, 'Times New Roman', serif;
@@ -387,6 +382,57 @@
   color: inherit;
 }
 
+.people-section {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.55fr) minmax(0, 1.45fr);
+  align-content: center;
+  align-items: start;
+  gap: clamp(2rem, 7vw, 8rem);
+  box-sizing: border-box;
+  min-height: calc(100vh - 76px);
+  padding: clamp(6rem, 10vw, 10rem) 6vw;
+  border-top: 1px solid var(--border);
+  background: var(--background);
+}
+
+.people-card {
+  padding: clamp(2rem, 3.5vw, 3.3rem);
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.people-card h3 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.8rem, 2.8vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.people-copy {
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  border-top: 1px solid var(--border);
+}
+
+.people-copy p {
+  margin: 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted-foreground);
+  font-size: clamp(1.05rem, 1.6vw, 1.32rem);
+  line-height: 1.65;
+}
+
+.people-copy p:first-child {
+  padding-bottom: 0.35rem;
+  border-bottom: 0;
+}
+
+.people-copy p + p {
+  padding-top: 0.35rem;
+}
+
 .links-section {
   display: grid;
   grid-template-columns: minmax(190px, 0.55fr) minmax(0, 1.45fr);
@@ -424,7 +470,7 @@
 }
 
 @media (max-width: 900px) {
-  .basic-info {
+  .bio-section {
     grid-template-columns: 1fr;
   }
 
@@ -448,6 +494,7 @@
 
   .research-intro,
   .articles,
+  .people-section,
   .links-section {
     grid-template-columns: 1fr;
   }
@@ -463,6 +510,7 @@
 
 @media (max-width: 560px) {
   .site-header {
+    gap: 0.75rem;
     min-height: 68px;
     padding-inline: 5vw;
   }
@@ -472,15 +520,16 @@
   }
 
   .site-header nav {
-    gap: 0.8rem;
+    gap: clamp(0.45rem, 2vw, 0.8rem);
   }
 
   .site-header nav a {
-    font-size: 1rem;
+    font-size: clamp(0.82rem, 3.6vw, 1rem);
   }
 
-  #basic-info,
+  #bio,
   #research,
+  #people,
   #links {
     scroll-margin-top: 68px;
   }
@@ -500,8 +549,13 @@
 
   .background-grid,
   .research-section,
+  .people-section,
   .links-section {
     padding-inline: 5vw;
+  }
+
+  .people-section {
+    min-height: calc(100vh - 68px);
   }
 
   .background-grid article {

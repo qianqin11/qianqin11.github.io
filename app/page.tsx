@@ -3,15 +3,18 @@ import { useEffect, useState } from 'react';
 const externalProps = { target: '_blank', rel: 'noreferrer' } as const;
 
 const navigationItems = [
-  { id: 'basic-info', label: 'Basic Info' },
+  { id: 'bio', label: 'Bio' },
   { id: 'research', label: 'Research' },
+  { id: 'people', label: 'People' },
   { id: 'links', label: 'Links' },
 ] as const;
 
 type SectionId = (typeof navigationItems)[number]['id'];
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState<SectionId>('basic-info');
+  const [activeSection, setActiveSection] = useState<SectionId>(
+    navigationItems[0].id,
+  );
 
   useEffect(() => {
     let animationFrame = 0;
@@ -72,8 +75,8 @@ export default function Home() {
       </a>
 
       <header className="site-header">
-        <a className="wordmark" href="#basic-info">
-          Qian Qin | 秦芊
+        <a className="wordmark" href="#bio">
+          Qian Qin
         </a>
         <nav aria-label="Menu">
           {navigationItems.map((item) => {
@@ -94,9 +97,9 @@ export default function Home() {
       </header>
 
       <div id="content">
-        <section className="basic-info" id="basic-info" aria-labelledby="name">
+        <section className="bio-section" id="bio" aria-labelledby="name">
           <div className="identity-panel">
-            <p className="section-label">Basic Info</p>
+            <p className="section-label">Bio</p>
             <h1 id="name">Qian Qin | 秦芊</h1>
             <div className="identity-details">
               <p>Associate Professor</p>
@@ -134,7 +137,7 @@ export default function Home() {
           </figure>
         </section>
 
-        <section className="background-grid" aria-label="Basic Info">
+        <section className="background-grid" aria-label="Biography details">
           <article>
             <h2>Education</h2>
             <div className="background-copy">
@@ -148,20 +151,6 @@ export default function Home() {
             <div className="background-copy">
               <p>Convergence analysis for Markov chains</p>
               <p>Markov chain Monte Carlo</p>
-            </div>
-          </article>
-
-          <article className="student-card">
-            <h2>Ph.D. Students</h2>
-            <div className="background-copy">
-              <p>
-                Haoxiang Li, graduated in 2024, supervised jointly with Galin L.
-                Jones.
-              </p>
-              <p>
-                Dissertation: Uncertainty Assessment and Convergence Analysis
-                for Markov Chain Monte Carlo Algorithms.
-              </p>
             </div>
           </article>
         </section>
@@ -560,6 +549,27 @@ export default function Home() {
               </p>
             </article>
           </div>
+        </section>
+
+        <section
+          className="people-section"
+          id="people"
+          aria-labelledby="people-title"
+        >
+          <h2 id="people-title">People</h2>
+          <article className="people-card" aria-labelledby="students-title">
+            <h3 id="students-title">Ph.D. Students</h3>
+            <div className="people-copy">
+              <p>
+                Haoxiang Li, graduated in 2024, supervised jointly with Galin L.
+                Jones.
+              </p>
+              <p>
+                Dissertation: Uncertainty Assessment and Convergence Analysis
+                for Markov Chain Monte Carlo Algorithms.
+              </p>
+            </div>
+          </article>
         </section>
 
         <section
