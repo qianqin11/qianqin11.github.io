@@ -256,20 +256,6 @@
   line-height: 1.65;
 }
 
-.student-card {
-  background: var(--primary) !important;
-  color: var(--primary-foreground);
-}
-
-.student-card .background-copy,
-.student-card .background-copy p {
-  border-color: #ffffff38;
-}
-
-.student-card .background-copy p {
-  color: color-mix(in srgb, var(--primary-foreground), transparent 12%);
-}
-
 .student-card .background-copy p:first-child {
   padding-bottom: 0.35rem;
   border-bottom: 0;
