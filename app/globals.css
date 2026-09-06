@@ -114,15 +114,51 @@
 }
 
 .site-header nav a {
+  position: relative;
+  padding-block: 0.45rem;
   color: var(--muted-foreground);
   font-size: 1.25rem;
   font-weight: 650;
   text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.site-header nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0.15rem;
+  left: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--primary);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 180ms ease;
 }
 
 .site-header nav a:hover,
 .site-header nav a:focus-visible {
   color: var(--primary);
+}
+
+.site-header nav a:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 4px;
+}
+
+.site-header nav a.is-active {
+  color: var(--primary);
+}
+
+.site-header nav a.is-active::after {
+  transform: scaleX(1);
+}
+
+#basic-info,
+#research,
+#links {
+  scroll-margin-top: 76px;
 }
 
 .basic-info {
@@ -441,6 +477,12 @@
 
   .site-header nav a {
     font-size: 1rem;
+  }
+
+  #basic-info,
+  #research,
+  #links {
+    scroll-margin-top: 68px;
   }
 
   .identity-panel {

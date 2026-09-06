@@ -1,6 +1,70 @@
+import { useEffect, useState } from 'react';
+
 const externalProps = { target: '_blank', rel: 'noreferrer' } as const;
 
+const navigationItems = [
+  { id: 'basic-info', label: 'Basic Info' },
+  { id: 'research', label: 'Research' },
+  { id: 'links', label: 'Links' },
+] as const;
+
+type SectionId = (typeof navigationItems)[number]['id'];
+
 export default function Home() {
+  const [activeSection, setActiveSection] = useState<SectionId>('basic-info');
+
+  useEffect(() => {
+    let animationFrame = 0;
+
+    const updateActiveSection = () => {
+      animationFrame = 0;
+
+      const headerHeight =
+        document.querySelector<HTMLElement>('.site-header')?.offsetHeight ?? 0;
+      const isAtPageBottom =
+        window.scrollY + window.innerHeight >=
+        document.documentElement.scrollHeight - 2;
+      let nextSection: SectionId = navigationItems[0].id;
+
+      for (const item of navigationItems) {
+        const section = document.getElementById(item.id);
+
+        if (
+          section &&
+          section.getBoundingClientRect().top <= headerHeight + 1
+        ) {
+          nextSection = item.id;
+        }
+      }
+
+      if (isAtPageBottom) {
+        nextSection = navigationItems.at(-1)?.id ?? nextSection;
+      }
+
+      setActiveSection((currentSection) =>
+        currentSection === nextSection ? currentSection : nextSection,
+      );
+    };
+
+    const scheduleUpdate = () => {
+      if (animationFrame === 0) {
+        animationFrame = window.requestAnimationFrame(updateActiveSection);
+      }
+    };
+
+    scheduleUpdate();
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+    window.addEventListener('hashchange', scheduleUpdate);
+
+    return () => {
+      window.removeEventListener('scroll', scheduleUpdate);
+      window.removeEventListener('resize', scheduleUpdate);
+      window.removeEventListener('hashchange', scheduleUpdate);
+      window.cancelAnimationFrame(animationFrame);
+    };
+  }, []);
+
   return (
     <main>
       <a className="skip-link" href="#content">
@@ -12,9 +76,20 @@ export default function Home() {
           Qian Qin | 秦芊
         </a>
         <nav aria-label="Menu">
-          <a href="#basic-info">Basic Info</a>
-          <a href="#research">Research</a>
-          <a href="#links">Links</a>
+          {navigationItems.map((item) => {
+            const isActive = activeSection === item.id;
+
+            return (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className={isActive ? 'is-active' : undefined}
+                aria-current={isActive ? 'location' : undefined}
+              >
+                {item.label}
+              </a>
+            );
+          })}
         </nav>
       </header>
 
