@@ -338,7 +338,8 @@
 .articles {
   display: grid;
   grid-template-columns: minmax(190px, 0.55fr) minmax(0, 1.45fr);
-  gap: clamp(2rem, 7vw, 8rem);
+  column-gap: clamp(2rem, 7vw, 8rem);
+  row-gap: 0;
   padding-top: clamp(5rem, 9vw, 9rem);
 }
 
