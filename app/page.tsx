@@ -30,9 +30,13 @@ export default function Home() {
                   School of Statistics
                 </a>
               </p>
-              <p>357 Ford Hall</p>
               <p>
-                <a href="mailto:qin@umn.edu">qin@umn.edu</a>
+                <a href="https://twin-cities.umn.edu/" {...externalProps}>
+                  University of Minnesota
+                </a>
+              </p>
+              <p>
+                Email: qqin at umn dot edu
               </p>
             </div>
             <p className="cv-link">
@@ -59,7 +63,7 @@ export default function Home() {
 
         <section className="background-grid" aria-label="Basic Info">
           <article>
-            <h2>Educational Background</h2>
+            <h2>Education</h2>
             <div className="background-copy">
               <p>Ph.D. in Statistics, University of Florida, 2019</p>
               <p>B.S. in Physics, Peking University, 2014</p>
@@ -75,7 +79,7 @@ export default function Home() {
           </article>
 
           <article className="student-card">
-            <h2>PhD Students</h2>
+            <h2>Ph.D. Students</h2>
             <div className="background-copy">
               <p>
                 Haoxiang Li, graduated in 2024, supervised jointly with Galin L.

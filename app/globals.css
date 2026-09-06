@@ -97,7 +97,7 @@
 
 .wordmark {
   color: inherit;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   text-decoration: none;
@@ -110,7 +110,7 @@
 
 .site-header nav a {
   color: var(--muted-foreground);
-  font-size: 0.78rem;
+  font-size: 1.25rem;
   font-weight: 650;
   text-decoration: none;
 }
@@ -138,7 +138,7 @@
   margin: 0 0 clamp(2.5rem, 6vw, 5.5rem);
   color: var(--primary);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 0.68rem;
+  font-size: 1.25rem;
   font-weight: 650;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -159,7 +159,7 @@
   padding-top: 1.35rem;
   border-top: 1px solid var(--foreground);
   color: var(--muted-foreground);
-  font-size: clamp(0.98rem, 1.3vw, 1.15rem);
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
   line-height: 1.55;
 }
 
@@ -193,7 +193,7 @@
 
 .cv-link {
   margin: 2.25rem 0 0;
-  font-size: 0.85rem;
+  font-size: 1.5rem;
   font-weight: 650;
 }
 
@@ -243,7 +243,7 @@
 }
 
 .background-copy {
-  margin-top: clamp(4rem, 7vw, 7rem);
+  margin-top: clamp(1rem, 2vw, 2rem);
   border-top: 1px solid var(--border);
 }
 
@@ -252,7 +252,7 @@
   padding: 1rem 0;
   border-bottom: 1px solid var(--border);
   color: var(--muted-foreground);
-  font-size: 0.88rem;
+  font-size: 1.25rem;
   line-height: 1.65;
 }
 
@@ -283,7 +283,7 @@
 .links-section > h2 {
   margin: 0;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(3.5rem, 7vw, 7.5rem);
+  font-size: clamp(3rem, 6vw, 6rem);
   font-weight: 400;
   letter-spacing: -0.065em;
   line-height: 0.9;
@@ -294,7 +294,7 @@
   margin: 0;
   color: var(--foreground);
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(1.55rem, 2.8vw, 2.6rem);
+  font-size: clamp(1rem, 1vw, 2rem);
   letter-spacing: -0.025em;
   line-height: 1.38;
 }
@@ -369,7 +369,7 @@
   border-bottom: 1px solid #ffffff2e;
   color: #d7e1e8;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(1.25rem, 2.2vw, 2rem);
+  font-size: clamp(1.25rem, 1.25vw, 2rem);
   line-height: 1.5;
 }
 
@@ -427,7 +427,7 @@
   }
 
   .wordmark {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .site-header nav {
@@ -435,7 +435,7 @@
   }
 
   .site-header nav a {
-    font-size: 0.68rem;
+    font-size: 1rem;
   }
 
   .identity-panel {
@@ -462,7 +462,7 @@
   }
 
   .research-intro > p {
-    font-size: 1.45rem;
+    font-size: 1.1rem;
   }
 
   .articles article:hover {

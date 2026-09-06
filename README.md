@@ -142,6 +142,8 @@ git status
 git diff
 ```
 
+Press q to exit the status check.
+
 Then save a revision:
 
 ```powershell
