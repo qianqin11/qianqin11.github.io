@@ -35,9 +35,7 @@ export default function Home() {
                   University of Minnesota
                 </a>
               </p>
-              <p>
-                Email: qqin at umn dot edu
-              </p>
+              <p>Email: qqin at umn dot edu</p>
             </div>
             <p className="cv-link">
               My{' '}
@@ -53,8 +51,8 @@ export default function Home() {
 
           <figure className="portrait">
             <img
-              src="/qian-qin.jpg"
-              alt="portrait"
+              src={`${import.meta.env.BASE_URL}qian-qin.jpg`}
+              alt="Qian Qin"
               width="720"
               height="900"
             />
@@ -93,7 +91,11 @@ export default function Home() {
           </article>
         </section>
 
-        <section className="research-section" id="research" aria-labelledby="research-title">
+        <section
+          className="research-section"
+          id="research"
+          aria-labelledby="research-title"
+        >
           <div className="research-intro">
             <h2 id="research-title">Research</h2>
             <p>
@@ -160,7 +162,8 @@ export default function Home() {
             <article>
               <p>
                 J. Cui, Q. Qin (2025). Convergence analysis of data augmentation
-                algorithms in Bayesian lasso models with log-concave likelihoods.{' '}
+                algorithms in Bayesian lasso models with log-concave
+                likelihoods.{' '}
                 <a href="https://arxiv.org/abs/2512.20041" {...externalProps}>
                   arXiv
                 </a>
@@ -222,7 +225,10 @@ export default function Home() {
                   S. Wang
                 </a>
                 ,{' '}
-                <a href="https://www.saptarshichakraborty.net/" {...externalProps}>
+                <a
+                  href="https://www.saptarshichakraborty.net/"
+                  {...externalProps}
+                >
                   S. Chakraborty
                 </a>
                 , Q. Qin,{' '}
@@ -252,8 +258,9 @@ export default function Home() {
 
             <article>
               <p>
-                Q. Qin (2024). Analysis of two-component Gibbs samplers using the
-                theory of two projections, <em>Annals of Applied Probability</em>.{' '}
+                Q. Qin (2024). Analysis of two-component Gibbs samplers using
+                the theory of two projections,{' '}
+                <em>Annals of Applied Probability</em>.{' '}
                 <a href="https://arxiv.org/abs/2201.12500" {...externalProps}>
                   arXiv
                 </a>
@@ -421,8 +428,8 @@ export default function Home() {
                 >
                   J. P. Hobert
                 </a>{' '}
-                (2019). Convergence complexity analysis of Albert and Chib&apos;s
-                algorithm for Bayesian probit regression,{' '}
+                (2019). Convergence complexity analysis of Albert and
+                Chib&apos;s algorithm for Bayesian probit regression,{' '}
                 <em>Annals of Statistics</em>.{' '}
                 <a href="https://arxiv.org/abs/1712.08867" {...externalProps}>
                   arXiv
@@ -440,7 +447,10 @@ export default function Home() {
                   J. P. Hobert
                 </a>
                 , Y. J. Jung,{' '}
-                <a href="https://people.clas.ufl.edu/kdkhare/" {...externalProps}>
+                <a
+                  href="https://people.clas.ufl.edu/kdkhare/"
+                  {...externalProps}
+                >
                   K. Khare
                 </a>
                 , Q. Qin (2018). Convergence analysis of MCMC algorithms for
@@ -477,7 +487,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="links-section" id="links" aria-labelledby="links-title">
+        <section
+          className="links-section"
+          id="links"
+          aria-labelledby="links-title"
+        >
           <h2 id="links-title">Links</h2>
           <div className="links-copy">
             <p>
@@ -488,7 +502,10 @@ export default function Home() {
                 Online Monte Carlo Seminar Series
               </a>
               ,{' '}
-              <a href="https://www.youtube.com/@MonteCarloSeminar" {...externalProps}>
+              <a
+                href="https://www.youtube.com/@MonteCarloSeminar"
+                {...externalProps}
+              >
                 Recordings of past talks
               </a>
               .
