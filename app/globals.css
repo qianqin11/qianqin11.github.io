@@ -299,7 +299,7 @@
   margin: 0;
   color: var(--foreground);
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(1rem, 1vw, 2rem);
+  font-size: clamp(1.25rem, 1.25vw, 2rem);
   letter-spacing: -0.025em;
   line-height: 1.38;
 }
