@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://qian-qin.qianqin11.chatgpt.site/og.png',
-        width: 1680,
-        height: 945,
+        width: 1734,
+        height: 907,
         alt: 'Qian Qin | 秦芊',
       },
     ],
