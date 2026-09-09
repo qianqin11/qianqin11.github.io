@@ -181,6 +181,18 @@ export default function Home() {
 
             <article>
               <p>
+                Q. Qin
+                {' '}
+                (2026). A global spectral gap for Metropolis-adjusted Langevin algorithm with a uniformly randomized step size.{' '}
+                <a href="https://arxiv.org/abs/2609.05847" {...externalProps}>
+                  arXiv
+                </a>
+                .
+              </p>
+            </article>
+
+            <article>
+              <p>
                 W. Fu, Q. Qin,{' '}
                 <a href="https://guanyangwang.github.io/" {...externalProps}>
                   G. Wang

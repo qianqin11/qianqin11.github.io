@@ -86,6 +86,18 @@ Replace the portrait with another file named `public/qian-qin.jpg`. A vertical i
 
 Replace the social card with another file named `public/og.png`. If its dimensions change, update `og:image:width` and `og:image:height` in `index.html`.
 
+## Pushing update to GitHub
+
+If you updated `README.md`, `app/page.tsx`, and `globals.css`, in Powershell, run:
+
+```powershell
+git add README.md app/page.tsx app/globals.css
+git commit -m "A short description of the update "
+
+git pull --rebase origin main
+git push origin main
+```
+
 ## How repository paths are handled
 
 The deployment workflow asks GitHub Pages for its actual base path and URL, then passes both to Vite during the build. Vite prefixes scripts, styles, the portrait, and the favicon correctly, while the same URL is written into canonical and social-sharing metadata. This also adapts automatically if a custom domain is configured in GitHub Pages.
