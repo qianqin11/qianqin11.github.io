@@ -183,7 +183,7 @@ export default function Home() {
               <p>
                 Q. Qin
                 {' '}
-                (2026). A global spectral gap for Metropolis-adjusted Langevin algorithm with a uniformly randomized step size.{' '}
+                (2026). A spectral gap for Metropolis-adjusted Langevin algorithm with a uniformly randomized step size.{' '}
                 <a href="https://arxiv.org/abs/2609.05847" {...externalProps}>
                   arXiv
                 </a>
@@ -197,7 +197,7 @@ export default function Home() {
                 <a href="https://guanyangwang.github.io/" {...externalProps}>
                   G. Wang
                 </a>{' '}
-                (2026). Spectral gap for the binary fixed-margin swap chain.{' '}
+                (2026). Spectral gap for the binary fixed-margin swap chain,  in <em>The 38th ACM-SIAM Symposium on Discrete Algorithms (SODA 2027).</em>.{' '}
                 <a href="https://arxiv.org/abs/2606.22636" {...externalProps}>
                   arXiv
                 </a>
