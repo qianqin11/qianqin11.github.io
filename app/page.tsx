@@ -197,7 +197,7 @@ export default function Home() {
                 <a href="https://guanyangwang.github.io/" {...externalProps}>
                   G. Wang
                 </a>{' '}
-                (2026). Spectral gap for the binary fixed-margin swap chain,  in <em>The 38th ACM-SIAM Symposium on Discrete Algorithms (SODA 2027).</em>.{' '}
+                (2026). Spectral gap for the binary fixed-margin swap chain,  in <em>The 38th ACM-SIAM Symposium on Discrete Algorithms (SODA 2027)</em>.{' '}
                 <a href="https://arxiv.org/abs/2606.22636" {...externalProps}>
                   arXiv
                 </a>
